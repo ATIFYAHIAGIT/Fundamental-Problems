@@ -10,12 +10,22 @@ int main () {
     b=1;
     next=1;
 
-    cout<<0<<" "<<1<<" ";
-    for (int i=2; i<n+1; i++) {
-        cout<<next<<" ";
-        a=b;
-        b=next;
-        next=a+b;
-   }
+    if (n==0) {
+        cout<<"Invalid";
+    }
+
+    if (n==1) {
+        cout<<0;
+    }
+    
+    if(n>1) {
+        cout<<0<<" "<<1<<" ";
+        for (int i=2; i<n; i++) {
+            cout<<next<<" ";
+            a=b;
+            b=next;
+            next=a+b;
+        }
+    }
     return 0;
 }
